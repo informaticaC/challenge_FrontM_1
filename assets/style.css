@@ -1,0 +1,156 @@
+ @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+:root{
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 1rem;
+    background-color: var(--Cream);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.img_desktop{
+    display: none;
+}
+
+.ff_Fraunces{
+    font-family: 'Fraunces', serif;
+}
+
+.ff_Montserray{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.card{
+    display: grid;
+    max-width: 400px;
+
+}
+
+.card_img{
+    overflow: hidden;
+    border-top-right-radius: 1rem ;
+    border-top-left-radius: 1rem;
+    
+}
+
+.card_body{
+    
+    background-color: var(--White);
+    border-bottom-left-radius: 1rem ;
+    border-bottom-right-radius: 1rem;
+     display: flex;
+    flex-direction: column;
+    gap: 0.8rem; 
+    padding: 2rem;
+}
+
+.card_body p{
+    color: var(--Darkgrayishblue);
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.card_body h4{
+    color: var(--Darkgrayishblue);
+    font-weight: lighter;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+
+}
+
+.card_body h2{
+    font-size: 2rem;
+    color: var(--Verydarkblue);
+}
+
+.card_body_price{
+    display: flex;
+    gap: 1rem;
+}
+
+.card_body_price p:nth-child(1){
+    color: var(--Darkcyan);
+    font-size: 2rem;
+}
+
+.card_body_price p:nth-child(2){
+    display: flex;
+    align-items: center;
+    text-decoration: line-through;
+    color: var(--Darkgrayishblue);
+}
+
+.card_body-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    border-radius: 7px;
+    background-color: var(--Darkcyan);
+    gap: 0.7rem;
+    border: 0;
+    
+    
+}
+
+.card_body-btn span{
+    color: var(--White);
+}
+
+@media (min-width: 700px) {
+
+    .container{
+        background-color: red;
+        
+    }
+
+    .img_desktop{
+        display: block;
+    }
+
+    .img_mobile{
+        display: none;
+    }
+
+    .card{
+        max-width: 600px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card_img{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+    }
+
+    .card_body{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+    
+}
