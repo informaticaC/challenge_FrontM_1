@@ -21,6 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     
 }
 
@@ -123,7 +124,8 @@ img{
 @media (min-width: 700px) {
 
     .container{
-        background-color: red;
+        display: flex;
+        flex-direction: column;
         
     }
 
